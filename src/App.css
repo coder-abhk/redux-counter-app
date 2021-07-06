@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  width: 100%;
+  background-color: #f9f9f9;
   display: flex;
-  flex-direction: column;
+  padding: 1em;
+}
+
+.header > h2 {
+  margin: auto;
+}
+
+.main {
+  width: 75%;
+  margin: 1em auto;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.count__wrapper {
+  color: #fff;
+  padding: 0.5em 1em;
+  margin-right: 1em;
+  border-radius: 3px;
+  font-weight: bold;
+  background-color: #e210ff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttons {
+  display: flex;
+}
+
+.button {
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  font-weight: bold;
+  border: 1px solid #000;
+  background-color: #fafafa;
+  cursor: pointer;
+}
+
+.button > span {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}
+
+.button:nth-child(1):hover {
+  background-color: #f2f2f2;
+}
+
+.button:nth-child(2) {
+  color: #fafafa;
+  background-color: #000000;
+  margin-left: 0.5em;
+}
+
+.button:nth-child(2):hover {
+  background-color: #333;
 }
