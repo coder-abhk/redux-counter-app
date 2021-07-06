@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
+import { incrementHandler, decrementHandler } from "../redux/actions/actions";
 
-const Main = ({ count, incrementHandler, decrementHandler }) => {
+const Main = ({ count, onIncrementHandler, onDecrementHandler }) => {
   return (
     <main className="main">
       <p className="count__wrapper">{count}</p>
@@ -9,7 +10,7 @@ const Main = ({ count, incrementHandler, decrementHandler }) => {
           className="button"
           onClick={(e) => {
             e.preventDefault();
-            incrementHandler();
+            onIncrementHandler();
           }}
         >
           <span>INCREMENT</span>
@@ -18,7 +19,7 @@ const Main = ({ count, incrementHandler, decrementHandler }) => {
           className="button"
           onClick={(e) => {
             e.preventDefault();
-            decrementHandler();
+            onDecrementHandler();
           }}
         >
           <span>DECREMENT</span>
@@ -36,8 +37,8 @@ const mapStateToPops = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    incrementHandler: () => dispatch({ type: "INCREMENT" }),
-    decrementHandler: () => dispatch({ type: "DECREMENT" }),
+    onIncrementHandler: () => dispatch(incrementHandler()),
+    onDecrementHandler: () => dispatch(decrementHandler()),
   };
 };
 
